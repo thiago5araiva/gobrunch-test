@@ -2,10 +2,44 @@
 <html>
   <head>
     <title><%= title %></title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link rel="stylesheet" href="/stylesheets/global.css" />
   </head>
   <body>
-    <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
+    <main>
+      <section class="home">
+        <div class="container mx-auto h-screen">
+          <div class="flex gap-3 py-6 h-full">
+            <div class="sidebar flex-1 max-w-60">
+              <div class="px-6 py-3 border border-bg-input rounded h-full">
+                <div class="grid justify-center items-center h-full">
+                  <div class="grid gap-1">
+                    <div>
+                      <label
+                        for="first_name"
+                        class="block mb-2 text-xs font-medium text-gray-900"
+                        >Quantity</label
+                      >
+                      <input
+                        type="text"
+                        id="quantity"
+                        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+                        placeholder="0"
+                        required />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="content flex-1">
+              <div
+                class="grid gap-3 px-6 py-3 border boder-bg-input rounded h-full overflow-auto">
+                <div id="items" class="grid gap-3 h-fit"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <script src="/javascripts/main.js"></script>
   </body>
 </html>
